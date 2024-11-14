@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="./tip-calculator-app-main (1)/tip-calculator-app-main/images/favicon-32x32.png">
+  <title> Tip calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="bg-lightGrayishCyan font-mono">
+  <div class="title mt-14 flex flex-col mx-auto">
+    <h1 class="text-darkgrayishCyan tracking-widest   mx-auto font-semibold text-3xl ">SPLI</h1>
+    <h1 class="text-darkgrayishCyan tracking-widest   mx-auto font-semibold text-3xl ">TIER</h1>
+  </div>
+  <!-- main-container -->
+  <div class="conatiner bg-white max-w-xl mx-auto flex flex-col md:flex-row gap-5 mt-10 rounded-md p-5">
+    <!-- right side  -->
+    <div class="right-side w-full md:w-1/2 ">
+      <!-- content -->
+      <div class="content flex flex-col ">
+        <!-- form -->
+        <form>
+          <div class="firtsbox relative">
+            <!-- bill -->
+            <p class="text-darkgrayishCyan text-xs">Bill</p>
+            <!-- input text -->
+            <input type="text" name="number"
+              class=" bill w-full h-7 hover:border-2 hover:border-darkgrayishCyan bg-veryLightGrayishcyan px-2 text-right text-darkCyan  font-semibold">
+            <!-- dollar svg -->
+            <img src="./tip-calculator-app-main (1)/tip-calculator-app-main/images/icon-dollar.svg" alt=""
+              class="absolute top-6 left-2 ">
+          </div>
+          <!-- buttons -->
+          <div class="tip-btn">
+            <!-- text -->
+            <p class="text-darkgrayishCyan mt-10 text-xs tracking-widest"> Select Tip %</p>
+            <!-- grid buttons -->
+            <div class="grid grid-cols-3 gap-5 mt-2 ">
+              <button class="bg-darkCyan text-white hover:bg-cyan  py-2 rounded-md tip ">5 %</button>
+              <button class="bg-darkCyan text-white hover:bg-cyan py-2 rounded-md tip">10 %</button>
+              <button class="bg-darkCyan text-white hover:bg-cyan py-2 rounded-md tip">15 %</button>
+              <button class="bg-darkCyan text-white hover:bg-cyan py-2 rounded-md tip">25 %</button>
+              <button class="bg-darkCyan text-white hover:bg-cyan py-2 rounded-md tip">50 %</button>
+              <input type="text" name="number" placeholder="custom"
+                class="bg-lightGrayishCyan text-darkCyan py-2 rounded-sm custom-tip">
+            </div>
+          </div>
+          <!-- number of people -->
+          <div class="number mt-6 relative">
+            <div class="text flex flex-row gap-5">
+              <!-- text person -->
+              <p class="text-darkgrayishCyan text-xs"> Number of People</p>
+              <!-- error msg -->
+              <p class=" error-msg text-red-600 text-right text-xs hidden">Can't be zero</p>
+            </div>
+            <!-- input person -->
+            <input type="text" name="number"
+              class="person   w-full h-7 hover:border-2 hover:border-darkgrayishCyan bg-veryLightGrayishcyan px-2 text-right text-darkCyan  font-semibold">
+            <!-- person svg -->
+            <img src="./tip-calculator-app-main (1)/tip-calculator-app-main/images/icon-person.svg" alt=""
+              class="absolute top-6 left-2">
+          </div>
+        </form>
+      </div>
+
+    </div>
+    <!-- left side -->
+    <div class="left-side w-full md:w-1/2 bg-darkCyan flex flex-col rounded-md p-5 ">
+      <!--  tip per person -->
+      <div class="display flex flex-row justify-between">
+        <div class="content text-white flex flex-col ">
+          <!-- text -->
+          <p class="text-white text-sm">Tip Amount</p>
+          <p class="text-lightGrayishCyan text-xs">/per person</p>
+        </div>
+        <!-- price -->
+        <div class="price">
+          <!-- heading -->
+          <h1 class="tipPerPerson text-cyan text-2xl font-semibold">$ 0.00</h1>
+        </div>
+      </div>
+      <!-- total amount per person-->
+      <div class="display flex flex-row justify-between mt-10">
+
+        <div class="content text-white flex flex-col ">
+          <!-- text -->
+          <p class="text-white text-sm">Total</p>
+          <p class="text-lightGrayishCyan text-xs">/per person</p>
+        </div>
+        <div class="price">
+          <!-- heading -->
+          <h1 class="amountPerPerson text-cyan text-2xl font-semibold">$ 0.00</h1>
+        </div>
+      </div>
+
+      <!-- submit button -->
+      <button class="reset bg-cyan px-full py-1 text-darkCyan rounded-md md:mt-auto">RESET</button>
+
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
